@@ -43,6 +43,8 @@ class SuperText extends StatelessWidget {
     /// GESTURES
     this.onTap,
     this.onDoubleTap,
+
+    this.package,
     /// KEY
     Key key,
   }) : super(key: key);
@@ -82,6 +84,8 @@ class SuperText extends StatelessWidget {
   /// GESTURES
   final Function onTap;
   final Function onDoubleTap;
+
+  final String package;
   // -----------------------------------------------------------------------------
 
   /// ALIGNMENT
@@ -133,7 +137,7 @@ class SuperText extends StatelessWidget {
               // inherit: inherit,
               // debugLabel: debugLabel,
               // locale: locale,
-              // package: package,
+              package: package,
               /// FONT
               fontFamily: font,
               // fontFeatures: fontFeatures,
