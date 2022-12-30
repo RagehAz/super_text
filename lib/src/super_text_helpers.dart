@@ -54,3 +54,13 @@ bool checkColorIsBlack(Color color) {
   return _isBlack;
 }
 // --------------------
+/// TESTED : WORKS PERFECT
+Alignment superCenterAlignment({
+  @required bool appIsLTR,
+}) {
+  return appIsLTR == true ?
+  Alignment.centerLeft
+      :
+  Alignment.centerRight;
+}
+// -----------------------------------------------------------------------------
