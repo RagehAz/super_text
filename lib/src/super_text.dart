@@ -39,7 +39,8 @@ class SuperText extends StatelessWidget {
     this.redDot = false,
     /// DIRECTION
     this.centered = true,
-    this.textDirection = TextDirection.ltr,
+    this.textDirection,
+    this.appIsLeftToRight = false,
     /// GESTURES
     this.onTap,
     this.onDoubleTap,
@@ -81,6 +82,7 @@ class SuperText extends StatelessWidget {
   /// DIRECTION
   final bool centered;
   final TextDirection textDirection;
+  final bool appIsLeftToRight;
   /// GESTURES
   final Function onTap;
   final Function onDoubleTap;
@@ -115,6 +117,8 @@ class SuperText extends StatelessWidget {
         leadingDot: leadingDot,
         redDot: redDot,
         onDoubleTap: onDoubleTap,
+        appIsLeftToRight: appIsLeftToRight,
+        textDirection: textDirection,
         children: <Widget>[
 
           if (leadingDot == true)

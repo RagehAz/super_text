@@ -10,9 +10,11 @@ class SuperTextBox extends StatelessWidget {
     @required this.leadingDot,
     @required this.redDot,
     @required this.children,
-    @required this.onDoubleTap,
     @required this.boxWidth,
     @required this.boxHeight,
+    @required this.textDirection,
+    @required this.appIsLeftToRight,
+    @required this.onDoubleTap,
     Key key
   }) : super(key: key);
   /// --------------------------------------------------------------------------
@@ -25,14 +27,55 @@ class SuperTextBox extends StatelessWidget {
   final Function onDoubleTap;
   final double boxWidth;
   final double boxHeight;
+  final TextDirection textDirection;
+  final bool appIsLeftToRight;
   /// --------------------------------------------------------------------------
   static MainAxisAlignment _getMainAxisAlignment({
     @required bool centered,
+    @required TextDirection textDirection,
+    @required bool appIsLeftToRight,
   }){
-    return centered == true ?
-    MainAxisAlignment.center
-        :
-    MainAxisAlignment.start;
+
+    if (centered == true){
+      return MainAxisAlignment.center;
+    }
+
+    else {
+
+      if (textDirection == null){
+        return MainAxisAlignment.start;
+      }
+      else {
+
+        /// APP IS LTR (ENGLISH)
+        if (appIsLeftToRight == true){
+
+          if (textDirection == TextDirection.ltr){
+            return MainAxisAlignment.start;
+          }
+          else {
+            return MainAxisAlignment.end;
+          }
+
+        }
+
+        /// APP IS RTL (ARABIC)
+        else {
+
+          if (textDirection == TextDirection.rtl){
+            return MainAxisAlignment.start;
+          }
+          else {
+            return MainAxisAlignment.end;
+          }
+
+
+        }
+
+      }
+
+    }
+
   }
   // --------------------
   static CrossAxisAlignment _getCrossAxisAlignment({
@@ -40,11 +83,9 @@ class SuperTextBox extends StatelessWidget {
     @required bool leadingDot,
   }){
     return
-      redDot == true ?
-      CrossAxisAlignment.center
+      redDot == true ? CrossAxisAlignment.center
           :
-      leadingDot == true ?
-      CrossAxisAlignment.center
+      leadingDot == true ? CrossAxisAlignment.center
           :
       CrossAxisAlignment.center;
   }
@@ -64,7 +105,11 @@ class SuperTextBox extends StatelessWidget {
           alignment: Alignment.center,
           // color: Colorz.bloodTest,
           child: Row(
-            mainAxisAlignment: _getMainAxisAlignment(centered: centered,),
+            mainAxisAlignment: _getMainAxisAlignment(
+              centered: centered,
+              textDirection: textDirection,
+              appIsLeftToRight: appIsLeftToRight,
+            ),
             crossAxisAlignment: _getCrossAxisAlignment(
               leadingDot: leadingDot,
               redDot: redDot,
