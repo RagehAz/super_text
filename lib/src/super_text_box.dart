@@ -29,7 +29,8 @@ class SuperTextBox extends StatelessWidget {
   final double boxHeight;
   final TextDirection textDirection;
   final bool appIsLeftToRight;
-  /// --------------------------------------------------------------------------
+  // --------------------------------------------------------------------------
+  /// TESTED : WORKS PERFECT
   static MainAxisAlignment _getMainAxisAlignment({
     @required bool centered,
     @required TextDirection textDirection,
@@ -78,6 +79,7 @@ class SuperTextBox extends StatelessWidget {
 
   }
   // --------------------
+  /// TESTED : WORKS PERFECT
   static CrossAxisAlignment _getCrossAxisAlignment({
     @required bool redDot,
     @required bool leadingDot,
@@ -122,5 +124,5 @@ class SuperTextBox extends StatelessWidget {
     );
 
   }
-// -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 }
