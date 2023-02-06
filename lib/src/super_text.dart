@@ -11,7 +11,7 @@ class SuperText extends StatelessWidget {
     this.boxHeight,
     this.lineHeight = 50,
     this.maxLines = 1,
-    this.margin,
+    this.margins,
     this.lineThickness = 0.5,
     /// SPACING
     this.wordSpacing,
@@ -53,7 +53,7 @@ class SuperText extends StatelessWidget {
   final double boxHeight;
   final double lineHeight;
   final int maxLines;
-  final dynamic margin;
+  final dynamic margins;
   final double lineThickness;
   /// SPACING
   final double wordSpacing;
@@ -107,7 +107,7 @@ class SuperText extends StatelessWidget {
         boxWidth: boxWidth,
         boxHeight: boxHeight,
         onTap: onTap,
-        margin: margin,
+        margin: margins,
         centered: centered,
         leadingDot: leadingDot,
         redDot: redDot,

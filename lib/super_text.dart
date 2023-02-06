@@ -7,6 +7,6 @@ import 'src/red_dot.dart';
 import 'src/super_text_box.dart';
 import 'src/text_builder.dart';
 // -----------------------------------------------------------------------------
-part 'src/super_text.dart';
 part 'src/create_style_method.dart';
+part 'src/super_text.dart';
 // -----------------------------------------------------------------------------
