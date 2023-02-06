@@ -1,5 +1,4 @@
-import 'dart:ui';
-import 'package:flutter/material.dart';
+part of super_text;
 
 TextStyle createTextStyle({
   /// SIZE

@@ -1,3 +1,12 @@
 library super_text;
-/// SUPER TEXT
-export './src/super_text.dart';
+// -----------------------------------------------------------------------------
+import 'dart:ui';
+import 'package:flutter/material.dart';
+import 'src/leading_dot.dart';
+import 'src/red_dot.dart';
+import 'src/super_text_box.dart';
+import 'src/text_builder.dart';
+// -----------------------------------------------------------------------------
+part 'src/super_text.dart';
+part 'src/create_style_method.dart';
+// -----------------------------------------------------------------------------

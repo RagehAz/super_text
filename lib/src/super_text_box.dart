@@ -13,7 +13,7 @@ class SuperTextBox extends StatelessWidget {
     @required this.boxWidth,
     @required this.boxHeight,
     @required this.textDirection,
-    @required this.appIsLeftToRight,
+    @required this.appIsLTR,
     @required this.onDoubleTap,
     Key key
   }) : super(key: key);
@@ -28,7 +28,7 @@ class SuperTextBox extends StatelessWidget {
   final double boxWidth;
   final double boxHeight;
   final TextDirection textDirection;
-  final bool appIsLeftToRight;
+  final bool appIsLTR;
   // --------------------------------------------------------------------------
   /// TESTED : WORKS PERFECT
   static MainAxisAlignment _getMainAxisAlignment({
@@ -110,7 +110,7 @@ class SuperTextBox extends StatelessWidget {
             mainAxisAlignment: _getMainAxisAlignment(
               centered: centered,
               textDirection: textDirection,
-              appIsLeftToRight: appIsLeftToRight,
+              appIsLeftToRight: appIsLTR,
             ),
             crossAxisAlignment: _getCrossAxisAlignment(
               leadingDot: leadingDot,

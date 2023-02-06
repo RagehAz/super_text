@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'create_style_method.dart';
-import 'leading_dot.dart';
-import 'red_dot.dart';
-import 'super_text_box.dart';
-import 'text_builder.dart';
+part of super_text;
 
 class SuperText extends StatelessWidget {
   // --------------------------------------------------------------------------
@@ -40,7 +35,7 @@ class SuperText extends StatelessWidget {
     /// DIRECTION
     this.centered = true,
     this.textDirection,
-    this.appIsLeftToRight = false,
+    this.appIsLTR = false,
     /// GESTURES
     this.onTap,
     this.onDoubleTap,
@@ -82,7 +77,7 @@ class SuperText extends StatelessWidget {
   /// DIRECTION
   final bool centered;
   final TextDirection textDirection;
-  final bool appIsLeftToRight;
+  final bool appIsLTR;
   /// GESTURES
   final Function onTap;
   final Function onDoubleTap;
@@ -117,7 +112,7 @@ class SuperText extends StatelessWidget {
         leadingDot: leadingDot,
         redDot: redDot,
         onDoubleTap: onDoubleTap,
-        appIsLeftToRight: appIsLeftToRight,
+        appIsLTR: appIsLTR,
         textDirection: textDirection,
         children: <Widget>[
 
@@ -186,3 +181,26 @@ class SuperText extends StatelessWidget {
   }
   // -----------------------------------------------------------------------------
 }
+
+/// PLAN : ADD SELECTABLE TEXT FEATURE IN A PARAMETER IN SUPER TEXT
+/*
+
+
+//             SelectableText(
+//               text,
+//               toolbarOptions: const ToolbarOptions(
+//                 selectAll: true,
+//                 copy: true,
+//               ),
+//               textAlign: TextAlign.center,
+//               style: TextStyle(
+//                 color: Colorz.white255,
+//                 fontFamily: Words.bodyFont(context),
+//                 fontStyle: FontStyle.italic,
+//                 decoration: TextDecoration.none,
+//                 fontSize: MediaQuery.of(context).size.height * 0.02,
+//                 letterSpacing: 0.75,
+//               ),
+//             ),
+
+ */
