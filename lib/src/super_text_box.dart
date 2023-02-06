@@ -104,8 +104,10 @@ class SuperTextBox extends StatelessWidget {
           width: boxWidth,
           height: boxHeight,
           margin: superMargins(margin: margin),
-          alignment: Alignment.center,
-          // color: Colorz.bloodTest,
+          alignment: centered == true ? Alignment.center : superCenterAlignment(
+            appIsLTR: textDirection == TextDirection.ltr,
+          ),
+          // color: Colorz.blue80,
           child: Row(
             mainAxisAlignment: _getMainAxisAlignment(
               centered: centered,

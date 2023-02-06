@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../super_text.dart';
 import 'super_text_helpers.dart';
-
 
 class TextBuilder extends StatelessWidget {
   /// --------------------------------------------------------------------------
@@ -115,9 +113,6 @@ class TextBuilder extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(_labelCorner)),
             color: labelColor,
           ),
-          alignment: centered == true ? Alignment.center : superCenterAlignment(
-            appIsLTR: textDirection == TextDirection.ltr,
-          ),
           child:
           highlight == null ?
           Text(
@@ -174,5 +169,5 @@ class TextBuilder extends StatelessWidget {
     }
 
   }
-// -----------------------------------------------------------------------------
+  // -----------------------------------------------------------------------------
 }
