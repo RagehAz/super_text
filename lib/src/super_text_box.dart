@@ -34,7 +34,7 @@ class SuperTextBox extends StatelessWidget {
   static MainAxisAlignment _getMainAxisAlignment({
     @required bool centered,
     @required TextDirection textDirection,
-    @required bool appIsLeftToRight,
+    @required bool appIsLTR,
   }){
 
     if (centered == true){
@@ -49,7 +49,7 @@ class SuperTextBox extends StatelessWidget {
       else {
 
         /// APP IS LTR (ENGLISH)
-        if (appIsLeftToRight == true){
+        if (appIsLTR == true){
 
           if (textDirection == TextDirection.ltr){
             return MainAxisAlignment.start;
@@ -110,7 +110,7 @@ class SuperTextBox extends StatelessWidget {
             mainAxisAlignment: _getMainAxisAlignment(
               centered: centered,
               textDirection: textDirection,
-              appIsLeftToRight: appIsLTR,
+              appIsLTR: appIsLTR,
             ),
             crossAxisAlignment: _getCrossAxisAlignment(
               leadingDot: leadingDot,
