@@ -21,10 +21,10 @@ TextStyle createTextStyle({
   double letterSpacing,
   double wordSpacing,
   /// STYLE
-  FontStyle fontStyle,
-  TextBaseline textBaseline,
+  bool italic,
+  TextBaseline textBaseline = TextBaseline.alphabetic,
   List<Shadow> shadows,
-  TextOverflow overflow,
+  TextOverflow overflow = TextOverflow.ellipsis,
   /// DECORATION
   Color decorationColor,
   TextDecorationStyle decorationStyle,
@@ -62,7 +62,7 @@ TextStyle createTextStyle({
     letterSpacing: letterSpacing,
     wordSpacing: wordSpacing,
     /// STYLE
-    fontStyle: fontStyle,
+    fontStyle: italic == true ? FontStyle.italic : FontStyle.normal,
     textBaseline: textBaseline,
     shadows: shadows,
     overflow: overflow,

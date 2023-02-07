@@ -152,10 +152,10 @@ class SuperText extends StatelessWidget {
               letterSpacing: letterSpacing,
               wordSpacing: wordSpacing,
               /// STYLE
-              fontStyle: italic == true ? FontStyle.italic : FontStyle.normal,
-              textBaseline: TextBaseline.alphabetic,
+              italic: italic,
+              // textBaseline: TextBaseline.alphabetic,
               shadows: shadows,
-              overflow: TextOverflow.ellipsis,
+              // overflow: TextOverflow.ellipsis,
               /// DECORATION
               decorationColor: lineColor,
               decoration: line,
