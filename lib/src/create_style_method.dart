@@ -2,7 +2,7 @@ part of super_text;
 
 TextStyle createTextStyle({
   /// SIZE
-  @required double lineHeight,
+  @required double textHeight,
   /// DUNNO
   bool inherit = true,
   String debugLabel,
@@ -38,7 +38,7 @@ TextStyle createTextStyle({
 }) {
 
   const double _height = 1.44;
-  final double _fontSize = lineHeight / _height;
+  final double _fontSize = textHeight / _height;
 
   return TextStyle(
     /// DUNNO

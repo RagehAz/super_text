@@ -9,7 +9,7 @@ class SuperText extends StatelessWidget {
     /// SCALES
     this.boxWidth,
     this.boxHeight,
-    this.lineHeight = 50,
+    this.textHeight = 50,
     this.maxLines = 1,
     this.margins,
     this.lineThickness = 0.5,
@@ -51,7 +51,7 @@ class SuperText extends StatelessWidget {
   /// SCALES
   final double boxWidth;
   final double boxHeight;
-  final double lineHeight;
+  final double textHeight;
   final int maxLines;
   final dynamic margins;
   final double lineThickness;
@@ -118,7 +118,7 @@ class SuperText extends StatelessWidget {
 
           if (leadingDot == true)
             LeadingDot(
-              lineHeight: lineHeight,
+              textHeight: textHeight,
               color: textColor,
             ),
 
@@ -126,7 +126,7 @@ class SuperText extends StatelessWidget {
             text: text,
             maxLines: maxLines,
             centered: centered,
-            lineHeight: lineHeight,
+            textHeight: textHeight,
             labelColor: boxColor,
             highlight: highlight,
             highlightColor: highlightColor,
@@ -145,7 +145,7 @@ class SuperText extends StatelessWidget {
               color: textColor,
               // backgroundColor: backgroundColor, /// NO NEED
               /// SIZE
-              lineHeight: lineHeight,
+              textHeight: textHeight,
               /// WEIGHT
               fontWeight: weight,
               /// SPACING
@@ -169,7 +169,7 @@ class SuperText extends StatelessWidget {
 
           if (redDot == true)
             RedDot(
-              lineHeight: lineHeight,
+              textHeight: textHeight,
               labelColor: boxColor,
             ),
 

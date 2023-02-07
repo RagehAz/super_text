@@ -8,7 +8,7 @@ class TextBuilder extends StatelessWidget {
     @required this.text,
     this.style,
     this.highlight,
-    this.lineHeight,
+    this.textHeight,
     this.labelColor,
     this.maxLines = 1,
     this.centered = true,
@@ -19,7 +19,7 @@ class TextBuilder extends StatelessWidget {
   /// --------------------------------------------------------------------------
   final String text;
   final TextStyle style;
-  final double lineHeight;
+  final double textHeight;
   final Color labelColor;
   final ValueNotifier<dynamic> highlight;
   final int maxLines;
@@ -93,10 +93,10 @@ class TextBuilder extends StatelessWidget {
     /// VERSE HAS VALUE
     else {
       // --------------------
-      final double _sidePaddingValues = lineHeight * 0.15;
+      final double _sidePaddingValues = textHeight * 0.15;
       final double _sidePaddings = labelColor == null ? 0 : _sidePaddingValues;
       // --------------------
-      final double _labelCornerValues = lineHeight * 0.3;
+      final double _labelCornerValues = textHeight * 0.3;
       final double _labelCorner = labelColor == null ? 0 : _labelCornerValues;
       // --------------------
       final TextAlign _textAlign = SuperText.getTextAlign(centered: centered);

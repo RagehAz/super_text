@@ -4,12 +4,12 @@ import 'leading_dot.dart';
 class RedDot extends StatelessWidget {
   /// --------------------------------------------------------------------------
   const RedDot({
-    @required this.lineHeight,
+    @required this.textHeight,
     @required this.labelColor,
     Key key
   }) : super(key: key);
   /// --------------------------------------------------------------------------
-  final double lineHeight;
+  final double textHeight;
   final Color labelColor;
   /// --------------------------------------------------------------------------
   @override
@@ -17,19 +17,19 @@ class RedDot extends StatelessWidget {
 
     return Container(
       key: const ValueKey<String>('the_red_dot'),
-      height: lineHeight,
+      height: textHeight,
       margin: labelColor == null ?
-      EdgeInsets.symmetric(horizontal: lineHeight * 0.2)
+      EdgeInsets.symmetric(horizontal: textHeight * 0.2)
           :
-      EdgeInsets.symmetric(horizontal: lineHeight * 0.02),
+      EdgeInsets.symmetric(horizontal: textHeight * 0.02),
       alignment: Alignment.topCenter,
       child: Padding(
         padding: labelColor == null ?
-        EdgeInsets.only(top: lineHeight * 0.2)
+        EdgeInsets.only(top: textHeight * 0.2)
             :
-        EdgeInsets.only(top: lineHeight * 0.05),
+        EdgeInsets.only(top: textHeight * 0.05),
         child: LeadingDot.dot(
-          dotSize: lineHeight * 0.15,
+          dotSize: textHeight * 0.15,
           color: const Color.fromARGB(255, 233, 0, 0),
         ),
       ),

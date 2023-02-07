@@ -1,3 +1,4 @@
+### 0.0.7 : Changed lineHeight to textHeight
 ### 0.0.6 : Fixed Shrinkage issue
 ### 0.0.5 : Fixes
 ### 0.0.4 : Restructures
