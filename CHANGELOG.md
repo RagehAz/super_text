@@ -1,3 +1,4 @@
+### 0.0.10 : Added Font
 ### 0.0.9 : Added BulletPoints
 ### 0.0.8 : Changed Italic into bool
 ### 0.0.7 : Changed lineHeight to textHeight
