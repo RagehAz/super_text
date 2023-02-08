@@ -10,6 +10,7 @@ class BulletPoints extends StatelessWidget {
     this.showBottomLine = true,
     this.appIsLTR = true,
     this.textDirection = TextDirection.ltr,
+    this.font,
     Key key
   }) : super(key: key);
   /// --------------------------------------------------------------------------
@@ -20,6 +21,7 @@ class BulletPoints extends StatelessWidget {
   final bool showBottomLine;
   final bool appIsLTR;
   final TextDirection textDirection;
+  final String font;
   /// --------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,7 @@ class BulletPoints extends StatelessWidget {
                 leadingDot: true,
                 appIsLTR: appIsLTR,
                 textDirection: textDirection,
+                font: font,
               ),
             );
 
