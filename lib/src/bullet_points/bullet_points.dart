@@ -5,7 +5,7 @@ class BulletPoints extends StatelessWidget {
   const BulletPoints({
     @required this.bulletPoints,
     @required this.boxWidth,
-    this.centered,
+    this.centered = false,
     this.textColor = const Color.fromARGB(255, 133, 203, 218),
     this.showBottomLine = true,
     this.appIsLTR = true,
