@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'super_text_helpers.dart';
+import 'x_helpers.dart';
 
 class SuperTextBox extends StatelessWidget {
   /// --------------------------------------------------------------------------
@@ -103,8 +103,8 @@ class SuperTextBox extends StatelessWidget {
         child: Container(
           width: boxWidth,
           height: boxHeight,
-          margin: superMargins(margin: margin),
-          alignment: centered == true ? Alignment.center : superCenterAlignment(
+          margin: HelperMethod.superMargins(margin: margin),
+          alignment: centered == true ? Alignment.center : HelperMethod.superCenterAlignment(
             appIsLTR: textDirection == TextDirection.ltr,
           ),
           // color: Colorz.blue80,

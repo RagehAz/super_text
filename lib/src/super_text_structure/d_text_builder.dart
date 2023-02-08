@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../super_text.dart';
-import 'super_text_helpers.dart';
+import '../../super_text.dart';
+import 'x_helpers.dart';
 
 class TextBuilder extends StatelessWidget {
   /// --------------------------------------------------------------------------
@@ -86,7 +86,7 @@ class TextBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
 
     /// VERSE IS NULL
-    if (stringIsEmpty(text) == true){
+    if (HelperMethod.stringIsEmpty(text) == true){
       return const SizedBox();
     }
 
