@@ -5,6 +5,7 @@ class BulletPoints extends StatelessWidget {
   const BulletPoints({
     @required this.bulletPoints,
     @required this.boxWidth,
+    @required this.textHeight,
     this.centered = false,
     this.textColor = const Color.fromARGB(255, 133, 203, 218),
     this.showBottomLine = true,
@@ -15,6 +16,7 @@ class BulletPoints extends StatelessWidget {
   }) : super(key: key);
   /// --------------------------------------------------------------------------
   final List<String> bulletPoints;
+  final double textHeight;
   final double boxWidth;
   final bool centered;
   final Color textColor;
@@ -44,7 +46,7 @@ class BulletPoints extends StatelessWidget {
               child: SuperText(
                 text: bulletPoints[index],
                 margins: 0,
-                // size: 2,
+                textHeight: textHeight,
                 maxLines: 10,
                 centered: centered,
                 textColor: textColor,
