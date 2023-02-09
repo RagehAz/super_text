@@ -34,6 +34,9 @@ class BulletPoints extends StatelessWidget {
 
     else {
 
+      final double screenWidth = MediaQuery.of(context).size.width;
+      final double _boxWidth = boxWidth ?? (screenWidth - 20);
+
       return Column(
         crossAxisAlignment: centered == true ? CrossAxisAlignment.center : CrossAxisAlignment.start,
         children: <Widget>[
@@ -42,7 +45,7 @@ class BulletPoints extends StatelessWidget {
           ...List.generate(bulletPoints.length, (index){
 
             return SizedBox(
-              width: boxWidth,
+              width: _boxWidth,
               child: SuperText(
                 text: bulletPoints[index],
                 margins: 0,
@@ -64,7 +67,7 @@ class BulletPoints extends StatelessWidget {
           /// BOTTOM LINE
           if (showBottomLine == true)
           Container(
-            width: boxWidth - 20,
+            width: _boxWidth - 20,
             height: 0.5,
             color: textColor,
             margin: const EdgeInsets.symmetric(vertical: 10),
